@@ -4,9 +4,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip wheel -r requirements.txt --wheel-dir /wheels
 
+
 FROM python:3.11-slim
 WORKDIR /app
 COPY --from=builder /wheels /wheels
+COPY requirements.txt .
 RUN pip install --no-index --find-links=/wheels -r requirements.txt
 COPY app ./app
 COPY model ./model

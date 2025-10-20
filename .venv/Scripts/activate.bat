@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\Users\helen\OneDrive\Documentos\ERASMUS\mlops-diabetes\.venv"
+set "VIRTUAL_ENV=C:\Users\helen\Documents\mlops-diabetes\.venv"
 
 if not defined PROMPT set PROMPT=$P$G
 
